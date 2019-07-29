@@ -11,7 +11,8 @@ namespace W3Resource
             //Linq.squareOfNumberGreaterThan20();
             //Linq.frequencyOfNumbers();
             //Linq.frequencyOfLetters();
-            Linq.printDaysOfWeek();
+            //Linq.printDaysOfWeek();
+            Linq.multiplyNumberWithFrequency();
             Console.Read();
         }
     }

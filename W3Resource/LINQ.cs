@@ -10,6 +10,7 @@ namespace W3Resource
         static int[] negativeNumberArray = new int[10] { 1, -2, -4, 31, 5, -7, 23, -24, 10, 28 };
         static int[] repeatingArray = new int[] {1,2,3,4,3,5,6,7,8,4,6,3,5,9,8 };
         static string[] weekDays = new string[] { "Sunday", "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday" };
+        //static int[] 
 
         static string word = "book-keeper";
 
@@ -70,6 +71,16 @@ namespace W3Resource
                 Console.WriteLine(day);
         }
 
+        static public void multiplyNumberWithFrequency()
+        {
+            var nfQuery = from num in repeatingArray
+                     group num by num into nums
+                     select nums;
+            foreach(var num in nfQuery)
+            {
+                Console.WriteLine($"{num.Key}  {num.Count()}  {num.Sum()}");
+            }
+        }
 
         static void printOutput()
         {
