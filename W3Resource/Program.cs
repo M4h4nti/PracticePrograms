@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace W3Resource
 {
@@ -10,6 +6,13 @@ namespace W3Resource
     {
         static void Main(string[] args)
         {
+            //Linq.numbersDivisibleBy2();
+            //Linq.printPositiveNumbers();
+            //Linq.squareOfNumberGreaterThan20();
+            //Linq.frequencyOfNumbers();
+            //Linq.frequencyOfLetters();
+            Linq.printDaysOfWeek();
+            Console.Read();
         }
     }
 }
