@@ -20,7 +20,10 @@ namespace W3Resource
             //Linq.StringArrayToString();
             //Linq.StudentGradepoint(4);
             //Linq.GroupXtensionsAndGetCount();
-            Linq.RemoveEntryFromList();
+            //Linq.RemoveEntryFromList();
+            //Linq.GetSpecificLengthString(5);
+            //Linq.CartesianProduct();
+            Linq.Performjoin();
             Console.Read();
         }
     }
