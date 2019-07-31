@@ -12,7 +12,15 @@ namespace W3Resource
             //Linq.frequencyOfNumbers();
             //Linq.frequencyOfLetters();
             //Linq.printDaysOfWeek();
-            Linq.multiplyNumberWithFrequency();
+            //Linq.multiplyNumberWithFrequency();
+            //Linq.SpecificCharAtStartAndEnd("L", "N");
+            //Linq.PrintNumbersGreaterThan(4);
+            //Linq.GetTopNthRecords(4);
+            //Linq.GetUpperCaseLetters();
+            //Linq.StringArrayToString();
+            //Linq.StudentGradepoint(4);
+            //Linq.GroupXtensionsAndGetCount();
+            Linq.RemoveEntryFromList();
             Console.Read();
         }
     }
