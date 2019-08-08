@@ -10,8 +10,8 @@ namespace W3Resource
     {
         static string constant = "w3resource.com";
         static string sentence = "This is w3resource.com";
-        static string firstString = "This is first strinp";
-        static string secondSttring = "This is first string";
+        static string firstString = "This is string";
+        static string secondSttring = "This is first strinG";
         static string welcomeString = "Welcome to w3resource.com";
 
 
@@ -127,17 +127,107 @@ namespace W3Resource
             Console.WriteLine(string.Join("",newSentence));
         }
 
-        public static void countVowelsOrConstants()
+        public static void countVowelsOrConsonants()
         {
             int l = welcomeString.Length;
             char[] vowels = {'a', 'e', 'i', 'o', 'u'};
             int vowelCount = 0;
+            int consonantCount = 0;
             for(int i =0;i<l;i++)
             {
                 if (vowels.Contains(welcomeString[i]))
                     vowelCount++;
+                else if (char.ToLower(welcomeString[i]) >= 'a' && char.ToLower(welcomeString[i]) <= 'z')
+                    consonantCount++;
             }
-            Console.WriteLine($"vowels : {vowelCount} and constants : {l-vowelCount}");
+            Console.WriteLine($"vowels : {vowelCount} and constants : {consonantCount}");
+        }
+
+        public static void MaxOccuringChar()
+        {
+            int l = welcomeString.Length;
+            int[] charCount = new int[256];
+
+            for(int i = 0; i<l;i++)
+                charCount[welcomeString[i]]++;
+
+            int maxValue = -1;
+            char character = ' ';
+            for(int i =0;i<l;i++)
+            {
+                if(maxValue < charCount[welcomeString[i]])
+                {
+                    maxValue = charCount[welcomeString[i]];
+                    character = welcomeString[i];
+                }
+            }
+            Console.WriteLine($"{character} appears {maxValue} time in {welcomeString}.");
+        }
+
+        public static void sortStringAscending()
+        {
+            int l = constant.Length;
+            char[] charArray = constant.ToCharArray();
+            char ch;
+            for(int i=1;i<l;i++)
+            {
+                for(int j=0;j<l-i;j++)
+                {
+                    if(charArray[j] > charArray[j+1])
+                    {
+                        ch = charArray[j];
+                        charArray[j] = charArray[j + 1];
+                        charArray[j + 1] = ch;
+                    }
+                }
+            }
+            Console.WriteLine(charArray);
+
+        }
+
+        public static void GetSubString(int pos,int ln)
+        {
+            //string subString = secondSttring.Substring(pos, ln);
+            //Console.WriteLine(subString);
+            char[] charArray = secondSttring.ToCharArray();           
+            int c = 0;            
+            while (c < ln)
+            {
+                Console.Write(charArray[(pos + c)]);
+                c++;
+            }
+        }
+
+        public static void CheckSubstring(string subString)
+        {
+            //if(secondSttring.Contains(subString))
+            //    Console.WriteLine("The sub-string exists in the string.");
+            //else Console.WriteLine("The sub-string does not exists in the string.");
+            string[] strArray = secondSttring.Split(' ');
+            bool flag = false;
+            foreach(var str in strArray)
+            {
+                if (str.Equals(subString))
+                    flag = true;
+            }
+            if(flag)
+                Console.WriteLine("The sub-string exists in the string.");
+            else Console.WriteLine("The sub-string does not exists in the string.");
+        }
+
+        public static void ReplaceLowerToUpper()
+        {
+            int l = secondSttring.Length;
+            var replacedString = new StringBuilder();
+            for(int i =0;i<l;i++)
+            {
+                if (secondSttring[i] >= 'a' && secondSttring[i] <= 'z')
+                    replacedString.Append(char.ToUpper(secondSttring[i]));
+                else if (secondSttring[i] >= 'A' && secondSttring[i] <= 'Z')
+                    replacedString.Append(char.ToLower(secondSttring[i]));
+                else replacedString.Append(secondSttring[i]);
+            }
+            Console.WriteLine(replacedString);
         }
     }
 }

@@ -42,8 +42,12 @@ namespace W3Resource
             //Strings.CompareStrings();
             //Strings.CharsCount();
             //Strings.CopyString();
-            Strings.countVowelsOrConstants();
-
+            //Strings.countVowelsOrConsonants();
+            //Strings.MaxOccuringChar();
+            //Strings.sortStringAscending();
+            //Strings.GetSubString(5,5); 
+            //Strings.CheckSubstring("strings");
+            Strings.ReplaceLowerToUpper();
 
             Console.Read();
 
