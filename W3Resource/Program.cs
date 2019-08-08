@@ -6,6 +6,7 @@ namespace W3Resource
     {
         static void Main(string[] args)
         {
+            #region LinQ
             //Linq.numbersDivisibleBy2();
             //Linq.printPositiveNumbers();
             //Linq.squareOfNumberGreaterThan20();
@@ -23,8 +24,31 @@ namespace W3Resource
             //Linq.RemoveEntryFromList();
             //Linq.GetSpecificLengthString(5);
             //Linq.CartesianProduct();
-            Linq.Performjoin();
+            //Linq.Performjoin();
+            //Console.Read();
+            #endregion
+
+            #region Basic
+
+            #endregion
+
+            #region strings
+
+            //Strings.PrintString("Welcome, w3resource");
+            //Strings.GetStringlength();
+            //Strings.CharacterSeperation();
+            //Strings.CharacterReverse();
+            //Strings.WordCount();
+            //Strings.CompareStrings();
+            //Strings.CharsCount();
+            //Strings.CopyString();
+            Strings.countVowelsOrConstants();
+
+
             Console.Read();
+
+            #endregion
+
         }
     }
 }
