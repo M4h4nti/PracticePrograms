@@ -10,9 +10,10 @@ namespace W3Resource
     {
         static string constant = "w3resource.com";
         static string sentence = "This is w3resource.com";
-        static string firstString = "This is string";
+        static string firstString = "This is a string";
         static string secondSttring = "This is first strinG";
         static string welcomeString = "Welcome to w3resource.com";
+        static string magicWord = "abrakadabra";
 
 
         public static void PrintString(string text)
@@ -229,5 +230,46 @@ namespace W3Resource
             }
             Console.WriteLine(replacedString);
         }
+
+        public static void GetSubstringPosition(string text)
+        {
+            //char[] charArray = firstString.ToCharArray();
+            string[] strArray = firstString.Split(' ');
+            int l = strArray.Length;
+            int pos =-1;
+            for(int i=0;i<l;i++)
+            {
+                if (text.Equals(strArray[i]))
+                    pos = i;
+            }
+            if(pos > -1)
+                Console.WriteLine($"The substring '{text}' is found at position '{pos}' in the string '{firstString}'");
+            else Console.WriteLine($"The substring '{text}' is not found in the string '{firstString}'");
+        }
+
+        public static void CharOrNot(char ch)
+        {            
+             if(ch >= 'a' && ch<='z')           
+                Console.WriteLine($"Given character '{ch}' is an alphabet and of lowercase.");         
+             else if(ch >= 'A' && ch<='Z')
+                Console.WriteLine($"Given character '{ch}' is an alphabet and of uppercase.");
+            else Console.WriteLine($"Given character '{ch}' is not an alphabet.");           
+        }
+
+        public static void SubstringAppereanceCount(string text)
+        {
+            int start = 0;
+            int count = -1;
+            int index = -1;
+            while( start != -1)
+            {
+                start = magicWord.IndexOf(text,index+1);
+                count += 1;
+                index = start;
+            }
+            Console.WriteLine($"The substring appears '{count}' times in the string '{magicWord}'");
+        }
+
+
     }
 }

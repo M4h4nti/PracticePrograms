@@ -47,12 +47,29 @@ namespace W3Resource
             //Strings.sortStringAscending();
             //Strings.GetSubString(5,5); 
             //Strings.CheckSubstring("strings");
-            Strings.ReplaceLowerToUpper();
+            //Strings.ReplaceLowerToUpper();
+            //Strings.GetSubstringPosition("This");
+            //Strings.CharOrNot('M');
+            //Strings.SubstringAppereanceCount("bra");
 
-            Console.Read();
+
 
             #endregion
 
+            #region functions
+            //Functions.BasicFunction();
+            //Functions.FunctionWithParameter("VJ");
+            //Functions.AddTwoNumbers(15, 16);
+            //Functions.GetNumberOfSpaces("This is a test string.");
+
+            //int[] numArray = new int[] { 1, 3, 5, 7, 9 };
+            //Functions.SumOfArrayElements(numArray);
+
+            //Functions.SwapTwoNumbers(3, 5);
+            //Functions.ToThePower(5, 3);
+            #endregion
+
+            Console.Read();
         }
     }
 }
